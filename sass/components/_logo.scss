@@ -1,0 +1,33 @@
+
+   /*logo header + footer */
+   .web{
+    display: inline-block;
+  
+    color: $accent-color;
+    font-family: $logo-font;
+    font-weight:$basic-weight;
+    font-size: 26px;
+    line-height:$first;
+  }
+
+ /*logo hesder*/
+.studio{
+ 
+    color: $studio-color;
+    font-family: $logo-font;
+    font-weight:$basic-weight;
+    font-size: 26px;
+    line-height:$first;
+   }
+
+   /*logo footer*/
+
+.logo{
+    display: inline-block;
+    
+    color: $main-title-color;
+    font-family: $logo-font;
+    font-weight: $basic-weight;
+    font-size: 26px;
+    line-height: $first-height;
+  }

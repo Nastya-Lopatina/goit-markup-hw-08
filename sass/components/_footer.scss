@@ -1,0 +1,117 @@
+/*FOOTER*/
+.footer{
+  background-color:  $footer-hero-color;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+  } 
+  
+  .content-link{
+    margin-right: 70px;
+  }
+  .content-link > a{
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+
+  /*Адрес+контакты*/
+  .info li + li{
+    margin-top: 9px;
+  }
+
+.info__address{
+  color:  $main-title-color;
+  font-style: normal;
+  font-weight:$second-weight;
+  font-size:  $basic-size;
+  line-height: $third-height;
+}
+.info__mail{
+  color: $contact-color;
+  font-style: normal;
+  font-size:  $basic-size;
+  line-height: $third-height;
+}
+.info__tel{
+  color: $contact-color;
+  font-style: normal;
+  font-size:  $basic-size;
+  line-height: $third-height;
+}
+
+/*Присоединяйтесь*/
+.invoke-social{
+    margin-right: 93px;
+  }
+  .invoke{
+    margin-top: 0;
+    margin-bottom: 20px;
+  
+    color: $main-title-color;
+    font-weight:$basic-weight;
+    font-size:  $basic-size;
+    line-height:$secondary-height;
+    text-transform: uppercase;
+    }
+  
+  .social-footer{
+    display: flex;
+  }
+  
+  .social-footer li + li{
+    margin-left: 10px;
+  }
+  .social-footer__link {
+    width: 44px;
+    height: 44px;
+  
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: $social-link-footer-background ;
+    border-radius: 50px;
+
+    &:hover,
+    &:focus{
+      background-color:  $accent-color;
+    }
+  }
+
+  .social-footer__icon{
+    fill: $main-title-color;
+  }
+  
+  
+  /*Подписка на рассылк*/
+  .form-footer{
+    display: flex;
+  }
+  .form-footer__input{
+    color:$main-title-color;
+    padding-left: 16px; 
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background:$footer-hero-color;
+  }
+  .subscribe{
+   margin-left: 12px;
+   
+  } 
+  
+  .icon-send{
+    margin-left: 10px;
+  }
+    
