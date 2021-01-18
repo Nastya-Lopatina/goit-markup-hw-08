@@ -61,7 +61,7 @@
     color:  $main-text-color;
     font-weight:$basic-weight;
     font-size: 20px;
-    line-height:$first;
+    line-height:$first-height;
     text-align: center;
   }
   .form-field{
@@ -74,7 +74,7 @@
 
     margin-top: 0;
     margin-bottom: 4px;
-    color: #757575;
+    color: $text-color;
     
     font-style: normal;
     font-weight:$second-weight;
@@ -163,7 +163,7 @@
     
     font-weight:$second-weight;
     font-size:  $basic-size;
-    line-height:$third;
+    line-height: $third-height;
     letter-spacing: 0.03em;
     color: var(--text-color);
 
