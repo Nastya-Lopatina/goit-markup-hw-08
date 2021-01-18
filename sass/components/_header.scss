@@ -1,22 +1,22 @@
 /* HEADER */
 .header{
-    padding-top: 24px;
-    border-bottom: 1px solid  $border-bottom-color; 
-  } 
-  
-  .header-main{
-    display: flex;
-    align-items: center;
-  }
-  .menu-nav{
-    display: flex;
-  }
-  .menu-nav > a{
-    margin-right: 93px;
-  } 
+  position: relative;
+}
+ 
+.menu-button{
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+ 
+.menu-button .menu-close{
+  display: none;
+}
   
    
-  /*site-nav list*/
+  /*site-nav list*
   .site-nav{
     display: flex;
     
@@ -70,7 +70,7 @@
     color: $accent-color;
   }
   
-  /*auth-nav list*/
+  /*auth-nav list*
   .auth-nav{
     display: flex;
     margin-left: auto;
