@@ -15,49 +15,53 @@
 <header class="header">
     
         <div class="container header-main"> 
-            
-            
+             <nav class="menu-nav" >
+                            <a href="./index.html" ><span class="web">Web</span><span class="studio">Studio</span> </a>
                 
-                <nav class="menu-nav" >
-                        <a href="./index.html" ><span class="web">Web</span><span class="studio">Studio</span> </a>
-            
-            
-                        <button type="button" class="menu-button">
-                            <svg width="40px" height="40px" class="menu-icon" aria-label="Переключатель мобильного меню" aria-controls="" aria-expanded="false">
-                                <use href="./images/icon/mobile-icon-menu.svg#icon-menu" class="menu-open"></use>
-                                <use href="./images/icon/mobile-icon-menu.svg#icon-close" class="menu-close"></use>
-                            </svg>
-                        </button>
+                
+                            <button type="button" class="menu-button is-open" data-menu-button aria-expanded="false">
 
-                        <ul class="site-nav " >
-                            <li> 
-                                <a class="site-nav__link current" href="./index.html"> Студия</a>
-                            </li>
-                            <li> 
-                                <a class="site-nav__link" href="./portfolio.html"> Портфолио</a>
-                            </li>
-                            <li> <a class="site-nav__link" href=""> Контакты</a></li>
-                        </ul>
-                    </nav>
+                                <svg width="40px" height="40px" class="menu-icon" 
+                                aria-label="Переключатель мобильного меню" 
+                                aria-controls="container-menu">
+                                    <use href="./images/icon/mobile-icon-menu.svg#icon-menu" class="menu-open"></use>
+                                    <use href="./images/icon/mobile-icon-menu.svg#icon-close" class="menu-close"></use>
+                                </svg>
+                            </button>
 
-                    <ul class="auth-nav list">
-                        <li> 
-                            
-                            <a class="auth-nav__contact " href="info@devstudio.com"> 
-                                
-                                <svg width="16px" height="12px" class="envelope">
-                                <use href="./images/icon/sprinte.svg#icon-envelope"></use>
-                            </svg> info@devstudio.com</a>
-                        </li>
-                        <li> 
-                            
-                            <a class="auth-nav__contact " href=" +380961111111"> 
+                           <div class="container-menu " data-menu>
 
-                                <svg width="10px" height="16px" class="smartphone">
-                                <use href="./images/icon/sprinte.svg#icon-smartphone"></use>
-                            </svg> +38 096 111 11 11</a>
-                        </li>
-                    </ul>
+                            <ul class="site-nav " >
+                                <li> 
+                                    <a class="site-nav__link current" href="./index.html"> Студия</a>
+                                </li>
+                                <li> 
+                                    <a class="site-nav__link" href="./portfolio.html"> Портфолио</a>
+                                </li>
+                                <li> <a class="site-nav__link" href=""> Контакты</a></li>
+                            </ul>
+                            <ul class="auth-nav list">
+                                <li> 
+                                    
+                                    <a class="auth-nav__contact " href="info@devstudio.com"> 
+                                        
+                                        <svg width="16px" height="12px" class="envelope">
+                                        <use href="./images/icon/sprinte.svg#icon-envelope"></use>
+                                    </svg> info@devstudio.com</a>
+                                </li>
+                                <li> 
+                                    
+                                    <a class="auth-nav__contact " href=" +380961111111"> 
+    
+                                        <svg width="10px" height="16px" class="smartphone">
+                                        <use href="./images/icon/sprinte.svg#icon-smartphone"></use>
+                                    </svg> +38 096 111 11 11</a>
+                                </li>
+                            </ul>
+                        </div>
+              </nav>
+
+                
                 
          </div>
 </header>
@@ -568,6 +572,7 @@
                 });
         })();
     </script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
 
