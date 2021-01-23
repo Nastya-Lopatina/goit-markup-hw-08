@@ -2,10 +2,15 @@
 
 body{
     padding-top: 60px;
+    @media screen and (min-width: 768px) {
+        padding-top: 80px;
+    }
     background-color:  $main-title-color;
     color: $main-text-color;
     font-family: $primary-font;
     letter-spacing: 0.03em
+
+    
 }
   
 a{

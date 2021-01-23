@@ -25,6 +25,8 @@
 .menu-nav >a{
   @media screen and (min-width: 768px){
     display: flex;
+    padding-top: 24px;
+    padding-bottom: 25px;
     
   }
 }
@@ -134,8 +136,8 @@ letter-spacing: 0.02em;
       }
 
       @media screen and (min-width: 768px) {
-      padding-bottom: 33px;
-      }
+        padding-bottom: 33px;
+        }
 
 
    &.current::after{
