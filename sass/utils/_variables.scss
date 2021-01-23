@@ -29,25 +29,4 @@
 
     $basic-size:14px; 
     $second-size1:16px; 
-   /*Кнопка открытия меню*/
-.menu-button{
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-  
-  }
-   
-  .menu-button .icon-open{
-    display: none;
-    fill: currentColor;
-  }
-  
-  .menu-button.is-open .icon-open{
-    display: block;
-  }
-    
-  .menu-button.is-open .icon-cross{
-    display: none;
-  }  
+ 

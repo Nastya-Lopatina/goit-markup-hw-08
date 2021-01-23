@@ -15,38 +15,62 @@
 <header class="header">
     
         <div class="container header-main"> 
-              <nav class="menu-nav" >
-                    <a href="./index.html" ><span class="web">Web</span><span class="studio">Studio</span> </a>
-                    <ul class="site-nav " >
-                       <li> 
-                           <a class="site-nav__link " href="./index.html"> Студия</a>
-                       </li>
-                       <li> 
-                           <a class="site-nav__link current" href="./portfolio.html"> Портфолио</a>
-                       </li>
-                       <li> <a class="site-nav__link" href=""> Контакты</a></li>
-                   </ul>
-              </nav>
-   
-                <ul class="auth-nav list">
-                    <li> 
-                       
-                        <a class="auth-nav__contact " href="info@devstudio.com"> 
+                 <nav class="menu-nav" >
+                            <a href="./index.html" ><span class="web">Web</span><span class="studio">Studio</span> </a>
+                
+                
+                            <button type="button" 
+                                class="menu-button is-open" 
+                                aria-expanded="false"
+                                aria-controls="container-menu" data-menu-button >
                             
-                            <svg width="16px" height="12px" class="envelope">
-                            <use href="./images/icon/sprinte.svg#icon-envelope"></use>
-                        </svg> info@devstudio.com</a>
-                   </li>
-                    <li> 
-                        
-                        <a class="auth-nav__contact " href=" +380961111111"> 
+                                <svg width="40px" height="40px" 
+                                    aria-label="Переключатель мобильного меню" >
+                                    
+                                    <use class="icon-cross" href="./images/icon/mobile.svg#icon-cross"></use>
+                                    <use class="icon-open" href="./images/icon/mobile.svg#icon-menu"></use>
+                                
+                                </svg>
+                            </button>
 
-                            <svg width="10px" height="16px" class="smartphone">
-                            <use href="./images/icon/sprinte.svg#icon-smartphone"></use>
-                        </svg> +38 096 111 11 11</a>
-                    </li>
-               </ul>
-         </div>
+                        <div class="container-menu" id="container-menu" data-menu>
+
+                            <ul class="site-nav " >
+                                <li class="site-nav__list"> 
+                                    <a class="site-nav__link " href="./index.html"> Студия</a>
+                                </li>
+
+                                <li class="site-nav__list"> 
+                                    <a class="site-nav__link current" href="./portfolio.html"> Портфолио</a>
+                                </li>
+
+                                <li class="site-nav__list"> <a class="site-nav__link" href=""> Контакты</a></li>
+                            </ul>
+
+                            <ul class="auth-nav">
+
+                                <li class="auth-nav__list"> 
+                                    
+                                    <a class="auth-nav__contact " href="info@devstudio.com"> 
+                                        
+                                        <svg width="16px" height="12px" class="envelope">
+                                        <use href="./images/icon/sprinte.svg#icon-envelope"></use>
+                                    </svg> info@devstudio.com</a>
+                                </li>
+
+                                <li class="auth-nav__list"> 
+                                    
+                                    <a class="auth-nav__contact " href=" +380961111111"> 
+    
+                                        <svg width="10px" height="16px" class="smartphone">
+                                        <use href="./images/icon/sprinte.svg#icon-smartphone"></use>
+                                    </svg> +38 096 111 11 11</a>
+                                </li>
+                            </ul>
+                    </div>
+                </nav>
+        </div>
+            
 </header>
 
 <main>
@@ -55,11 +79,26 @@
     <div class="container">
         <!--<h1 class="category">Категории услуг</h1>-->
         <ul class="list-button">
-            <li> <button class="list-button__buttons" type="button">Все</button> </li>
-            <li> <button class="list-button__buttons" type="button">Веб-сайты</button></li>
-            <li> <button class="list-button__buttons" type="button">Приложения</button></li>
-            <li> <button class="list-button__buttons" type="button">Дизайн</button></li>
-            <li> <button class="list-button__buttons" type="button">Маркетинг</button></li>
+            <li class="list-button__element"> 
+                <button class="list-button__buttons" type="button">Все</button> 
+            </li>
+
+            <li class="list-button__element"> 
+                <button class="list-button__buttons" type="button">Веб-сайты</button>
+            </li>
+
+            <li class="list-button__element"> 
+                <button class="list-button__buttons" type="button">Приложения</button>
+            </li>
+
+            <li class="list-button__element"> 
+                <button class="list-button__buttons" type="button">Дизайн</button>
+            </li>
+
+            <li class="list-button__element"> 
+                <button class="list-button__buttons" type="button">Маркетинг</button>
+            </li>
+
         </ul>
     
         
@@ -71,7 +110,42 @@
                 <a class="portfolio__link" href=""> 
 
                     <div class="overlay-img">
-                        <img src="./images/port1.jpg" alt="" width="370">
+                        <picture>
+                            
+                            <img  srcset="./images/img1-480@2x.jpg 2x,
+                            ./images/img1-480@3x.jpg 3x"
+                            src="./images/img1-480.jpg"
+                            alt="Дизайн веб-сайта Технокряк"
+                            sizes="(min-width: 1200px) 370px, 
+                            (min-width: 768px) 354px, 
+                            (min-width: 480px) 450px">
+
+                                   <source srcset="./images/img1-480.webp 1x,
+                                    ./images/img1-480@2x.webp 2x,
+                                    ./images/img1-480@3x.webp 3x" type="image/webp">
+
+                                    <source srcset="./images/portfolio1-768.webp 1x,
+                                    ./images/portfolio1-768@2x.webp 2x,
+                                    ./images/portfolio1-768@3x.webp 3x"
+                                    media="(min-width: 768px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio1-768.jpg 1x,
+                                    ./images/portfolio1-768@2x.jpg 2x,
+                                    ./images/portfolio1-768@3x.jpg 3x"
+                                    media="(min-width: 768px)">
+
+                                    <source srcset="./images/portfolio1-1200.webp 1x,
+                                    ./images/portfolio1-1200@2x.webp 2x,
+                                    ./images/portfolio1-12008@3x.webp 3x"
+                                    media="(min-width: 1200px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio1-1200.jpg 1x,
+                                    ./images/portfolio1-1200@2x.jpg 2x,
+                                    ./images/portfolio1-1200@3x.jpg 3x"
+                                    media="(min-width: 1200px)">
+                       </picture>
 
                         <div class="overlay ">
                             <p class="overlay__text" >
@@ -93,30 +167,105 @@
                 <a class="portfolio__link" href="">
 
                     <div class="overlay-img">
+                        <picture>
+                            
+                             <img srcset="./images/img2-480@2x.jpg 2x,
+                                    ./images/img2-480@3x.jpg 3x"
+                                    src="./images/img2-480.jpg"
+                                    alt="Пример дизайна постера"
+                                    sizes="(min-width: 1200px) 370px, 
+                                    (min-width: 768px) 354px, 
+                                    (min-width: 480px) 450px"
+                                >
 
-                      <img src="./images/port2.jpg" alt="" width="370">
+                                <source srcset="./images/img2-480.webp 1x,
+                                    ./images/img2-480@2x.webp 2x,
+                                    ./images/img2-480@3x.webp 3x" type="image/webp">
+
+                                    <source srcset="./images/portfolio2-768.webp 1x,
+                                    ./images/portfolio2-768@2x.webp 2x,
+                                    ./images/portfolio2-768@3x.webp 3x"
+                                    media="(min-width: 768px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio2-768.jpg 1x,
+                                    ./images/portfolio2-768@2x.jpg 2x,
+                                    ./images/portfolio2-768@3x.jpg 3x"
+                                    media="(min-width: 768px)">
+
+                                    <source srcset="./images/portfolio2-1200.webp 1x,
+                                    ./images/portfolio2-1200@2x.webp 2x,
+                                    ./images/portfolio2-12008@3x.webp 3x"
+                                    media="(min-width: 1200px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio2-1200.jpg 1x,
+                                    ./images/portfolio2-1200@2x.jpg 2x,
+                                    ./images/portfolio2-1200@3x.jpg 3x"
+                                    media="(min-width: 1200px)"
+                                    
+                                >
+                        </picture>
+
 
                             <div class="overlay ">
                                 <p class="overlay__text" >
-                                    Технокряк это современная площадка распространения коронавируса. 
-                                    Компании используют эту платформу для цифрового шпионажа 
-                                    и атак на защищённые сервера конкурентов.
+                                        Технокряк это современная площадка распространения коронавируса. 
+                                        Компании используют эту платформу для цифрового шпионажа 
+                                        и атак на защищённые сервера конкурентов.
                                 </p>
                             </div>
-                    </div>
+                    </div>    
 
-                    <div class="card">
-                        <h3 class="card__project">Постер New Orlean vs Golden Star</h3>
-                        <p class="card__work">Дизайн</p>
-                    </div>
+                        <div class="card">
+                            <h3 class="card__project">Постер New Orlean vs Golden Star</h3>
+                            <p class="card__work">Дизайн</p>
+                        </div>
                 </a> 
-            </li>
+        </li>
 
             <li class="portfolio__list"> 
                 <a class="portfolio__link" href="">
-                    <div class="overlay-img">
+                     <div class="overlay-img">
+                            <picture>
+                                
+                                <img srcset="./images/img3-480@2x.jpg 2x,
+                                ./images/img3-480@3x.jpg 3x"
+                                src="./images/img3-480.jpg"
+                                alt="Дизайна приложения Ресторан Seafood"
+                                sizes="(min-width: 1200px) 370px, 
+                                (min-width: 768px) 354px, 
+                                (min-width: 480px) 450px"
+                                >
+                                <source srcset="./images/img3-480.webp 1x,
+                                        ./images/img3-480@2x.webp 2x,
+                                        ./images/img3-480@3x.webp 3x" type="image/webp">
 
-                        <img src="./images/port3.jpg" alt="" width="370">
+                                        <source srcset="./images/portfolio3-768.webp 1x,
+                                        ./images/portfolio3-768@2x.webp 2x,
+                                        ./images/portfolio3-768@3x.webp 3x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp">
+
+                                        <source srcset="./images/portfolio3-768.jpg 1x,
+                                        ./images/portfolio3-768@2x.jpg 2x,
+                                        ./images/portfolio3-768@3x.jpg 3x"
+                                        media="(min-width: 768px)">
+
+                                        <source srcset="./images/portfolio3-1200.webp 1x,
+                                        ./images/portfolio3-1200@2x.webp 2x,
+                                        ./images/portfolio3-12008@3x.webp 3x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp">
+
+                                        <source srcset="./images/portfolio3-1200.jpg 1x,
+                                        ./images/portfolio3-1200@2x.jpg 2x,
+                                        ./images/portfolio3-1200@3x.jpg 3x"
+                                        media="(min-width: 1200px)">
+
+
+                            </picture>
+
                                 <div class="overlay ">
                                     <p class="overlay__text" >
                                         Технокряк это современная площадка распространения коронавируса. 
@@ -124,20 +273,55 @@
                                         и атак на защищённые сервера конкурентов.
                                     </p>
                                 </div>
-                    </div>
+                      </div>
 
-                    <div class="card">
-                        <h3 class="card__project">Ресторан Seafood</h3>
-                        <p class="card__work">Приложение</p>
-                    </div>
-                </a> 
+                            <div class="card">
+                                <h3 class="card__project">Ресторан Seafood</h3>
+                                <p class="card__work">Приложение</p>
+                            </div>
+                 </a> 
             </li>
 
             <li class="portfolio__list"> 
                 <a class="portfolio__link" href="">
                     <div class="overlay-img">
+                            <picture>
 
-                        <img src="./images/port4.jpg" alt="" width="370">
+                                <img srcset="./images/img4-480@2x.jpg 2x,
+                                ./images/img4-480@3x.jpg 3x"
+                                src="./images/img4-480.jpg"
+                                alt="Дизайн проекта Prime"
+                                sizes="(min-width: 1200px) 370px, 
+                                (min-width: 768px) 354px, 
+                                (min-width: 480px) 450px">
+
+                                <source srcset="./images/img4-480.webp 1x,
+                                    ./images/img4-480@2x.webp 2x,
+                                    ./images/img4-480@3x.webp 3x" type="image/webp">
+
+                                    <source srcset="./images/portfolio4-768.webp 1x,
+                                    ./images/portfolio4-768@2x.webp 2x,
+                                    ./images/portfolio4-768@3x.webp 3x"
+                                    media="(min-width: 768px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio4-768.jpg 1x,
+                                    ./images/portfolio4-768@2x.jpg 2x,
+                                    ./images/portfolio4-768@3x.jpg 3x"
+                                    media="(min-width: 768px)">
+
+                                    <source srcset="./images/portfolio4-1200.webp 1x,
+                                    ./images/portfolio4-1200@2x.webp 2x,
+                                    ./images/portfolio4-12008@3x.webp 3x"
+                                    media="(min-width: 1200px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio4-1200.jpg 1x,
+                                    ./images/portfolio4-1200@2x.jpg 2x,
+                                    ./images/portfolio4-1200@3x.jpg 3x"
+                                    media="(min-width: 1200px)">
+                            </picture>
+
                         <div class="overlay ">
                             <p class="overlay__text" >
                                 Технокряк это современная площадка распространения коронавируса. 
@@ -145,21 +329,56 @@
                                 и атак на защищённые сервера конкурентов.
                             </p>
                         </div>
-                    </div>
+                  </div>
                     
-                    <div class="card">
-                        <h3 class="card__project">Проект Prime</h3>
-                        <p class="card__work">Маркетинг</p>
-                    </div>
-                </a>
-            </li>
+                        <div class="card">
+                            <h3 class="card__project">Проект Prime</h3>
+                            <p class="card__work">Маркетинг</p>
+                        </div>
+              </a>
+        </li>
 
             <li class="portfolio__list"> 
                 <a class="lportfolio__link" href="">
 
                     <div  class="overlay-img">
+                            <picture>
 
-                        <img src="./images/port5.jpg" alt="" width="370">
+                                <img srcset="./images/img5-480@2x.jpg 2x,
+                                ./images/img5-480@3x.jpg 3x"
+                                src="./images/img5-480.jpg"
+                                alt="Приложение Boxes"
+                                sizes="(min-width: 1200px) 370px, 
+                                (min-width: 768px) 354px, 
+                                (min-width: 480px) 450px">
+
+                                    <source srcset="./images/img5-480.webp 1x,
+                                        ./images/img5-480@2x.webp 2x,
+                                        ./images/img5-480@3x.webp 3x" type="image/webp">
+
+                                        <source srcset="./images/portfolio5-768.webp 1x,
+                                        ./images/portfolio5-768@2x.webp 2x,
+                                        ./images/portfolio5-768@3x.webp 3x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp">
+
+                                        <source srcset="./images/portfolio5-768.jpg 1x,
+                                        ./images/portfolio5-768@2x.jpg 2x,
+                                        ./images/portfolio5-768@3x.jpg 3x"
+                                        media="(min-width: 768px)">
+
+                                        <source srcset="./images/portfolio5-1200.webp 1x,
+                                        ./images/portfolio5-1200@2x.webp 2x,
+                                        ./images/portfolio5-12008@3x.webp 3x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp">
+
+                                        <source srcset="./images/portfolio5-1200.jpg 1x,
+                                        ./images/portfolio5-1200@2x.jpg 2x,
+                                        ./images/portfolio5-1200@3x.jpg 3x"
+                                        media="(min-width: 1200px)"
+                                    >
+                        </picture>
 
                         <div class="overlay ">
                             <p class="overlay__text" >
@@ -181,8 +400,43 @@
                 <a class="portfolio__link" href="">
 
                     <div class="overlay-img">
+                                <picture>
 
-                        <img src="./images/port6.jpg" alt="" width="370">
+                                    <img  srcset="./images/img6-480@2x.jpg 2x,
+                                    ./images/img6-480@3x.jpg 3x"
+                                    src="./images/img6-480.jpg"
+                                    alt="Пример дизайна веб-сайта2"
+                                    sizes="(min-width: 1200px) 370px, 
+                                    (min-width: 768px) 354px, 
+                                    (min-width: 480px) 450px">
+
+                                    <source srcset="./images/img6-480.webp 1x,
+                                    ./images/img6-480@2x.webp 2x,
+                                    ./images/img6-480@3x.webp 3x" type="image/webp">
+
+                                    <source srcset="./images/portfolio6-768.webp 1x,
+                                    ./images/portfolio6-768@2x.webp 2x,
+                                    ./images/portfolio6-768@3x.webp 3x"
+                                    media="(min-width: 768px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio6-768.jpg 1x,
+                                    ./images/portfolio6-768@2x.jpg 2x,
+                                    ./images/portfolio6-768@3x.jpg 3x"
+                                    media="(min-width: 768px)">
+
+                                    <source srcset="./images/portfolio6-1200.webp 1x,
+                                    ./images/portfolio6-1200@2x.webp 2x,
+                                    ./images/portfolio6-12008@3x.webp 3x"
+                                    media="(min-width: 1200px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio6-1200.jpg 1x,
+                                    ./images/portfolio6-1200@2x.jpg 2x,
+                                    ./images/portfolio6-1200@3x.jpg 3x"
+                                    media="(min-width: 1200px)">
+
+                                </picture>
 
                         <div class="overlay ">
                             <p class="overlay__text" >
@@ -204,7 +458,42 @@
                 <a class="portfolio__link" href="">
 
                     <div class="overlay-img">
-                        <img src="./images/port7.jpg" alt="" width="370">
+                                <picture>
+
+                                    <img srcset="./images/img7-480@2x.jpg 2x,
+                                    ./images/img7-480@3x.jpg 3x"
+                                    src="./images/img7-480.jpg"
+                                    alt="Дизайн издания Limited Edition"
+                                    sizes="(min-width: 1200px) 370px, 
+                                    (min-width: 768px) 354px, 
+                                    (min-width: 480px) 450px">
+
+                                    <source srcset="./images/img7-480.webp 1x,
+                                    ./images/img7-480@2x.webp 2x,
+                                    ./images/img7-480@3x.webp 3x" type="image/webp">
+
+                                    <source srcset="./images/portfolio7-768.webp 1x,
+                                    ./images/portfolio7-768@2x.webp 2x,
+                                    ./images/portfolio7-768@3x.webp 3x"
+                                    media="(min-width: 768px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio7-768.jpg 1x,
+                                    ./images/portfolio7-768@2x.jpg 2x,
+                                    ./images/portfolio7-768@3x.jpg 3x"
+                                    media="(min-width: 768px)">
+
+                                    <source srcset="./images/portfolio7-1200.webp 1x,
+                                    ./images/portfolio7-1200@2x.webp 2x,
+                                    ./images/portfolio7-12008@3x.webp 3x"
+                                    media="(min-width: 1200px)" 
+                                    type="image/webp">
+
+                                    <source srcset="./images/portfolio7-1200.jpg 1x,
+                                    ./images/portfolio7-1200@2x.jpg 2x,
+                                    ./images/portfolio7-1200@3x.jpg 3x"
+                                    media="(min-width: 1200px)">
+                                </picture>
 
                         <div class="overlay ">
                             <p class="overlay__text" >
@@ -225,8 +514,44 @@
             <li class="portfolio__list"> 
                 <a class="portfolio__link" href="">
                     <div class="overlay-img">
+                            <picture>
+                                
+                                <img srcset="./images/img8-480@2x.jpg 2x,
+                                ./images/img8-480@3x.jpg 3x"
+                                src="./images/img8-480.jpg"
+                                alt="Дизайн проекта LAB"
+                                sizes="(min-width: 1200px) 370px, 
+                                (min-width: 768px) 354px, 
+                                (min-width: 480px) 450px">
 
-                        <img src="./images/port8.jpg" alt="" width="370">
+                                    <source srcset="./images/img8-480.webp 1x,
+                                        ./images/img8-480@2x.webp 2x,
+                                        ./images/img8-480@3x.webp 3x" type="image/webp">
+
+                                        <source srcset="./images/portfolio8-768.webp 1x,
+                                        ./images/portfolio8-768@2x.webp 2x,
+                                        ./images/portfolio8-768@3x.webp 3x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp">
+
+                                        <source srcset="./images/portfolio8-768.jpg 1x,
+                                        ./images/portfolio8-768@2x.jpg 2x,
+                                        ./images/portfolio8-768@3x.jpg 3x"
+                                        media="(min-width: 768px)">
+
+                                        <source srcset="./images/portfolio8-1200.webp 1x,
+                                        ./images/portfolio8-1200@2x.webp 2x,
+                                        ./images/portfolio8-12008@3x.webp 3x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp">
+
+                                        <source srcset="./images/portfolio8-1200.jpg 1x,
+                                        ./images/portfolio8-1200@2x.jpg 2x,
+                                        ./images/portfolio8-1200@3x.jpg 3x"
+                                        media="(min-width: 1200px)"
+                                    >
+                            </picture>
+
                         <div class="overlay ">
                             <p class="overlay__text" >
                                 Технокряк это современная площадка распространения коронавируса. 
@@ -246,7 +571,43 @@
                 <a class="portfolio__link" href="">
 
                     <div class="overlay-img">
-                        <img src="./images/port9.jpg" alt="" width="370">
+                        <picture>
+
+                            <img srcset="./images/img9-480@2x.jpg 2x,
+                                        ./images/img9-480@3x.jpg 3x"
+                                        src="./images/img9-480.jpg"
+                                        alt=" Дизайн приложения Growing Business"
+                                        sizes="(min-width: 1200px) 370px, 
+                                        (min-width: 768px) 354px, 
+                                        (min-width: 480px) 450px">
+
+                                    <source srcset="./images/img9-480.webp 1x,
+                                        ./images/img9-480@2x.webp 2x,
+                                        ./images/img9-480@3x.webp 3x" type="image/webp">
+    
+                                    <source srcset="./images/portfolio9-768.webp 1x,
+                                        ./images/portfolio9-768@2x.webp 2x,
+                                        ./images/portfolio9-768@3x.webp 3x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp">
+    
+                                    <source srcset="./images/portfolio9-768.jpg 1x,
+                                        ./images/portfolio9-768@2x.jpg 2x,
+                                        ./images/portfolio9-768@3x.jpg 3x"
+                                        media="(min-width: 768px)">
+    
+                                    <source srcset="./images/portfolio9-1200.webp 1x,
+                                        ./images/portfolio9-1200@2x.webp 2x,
+                                        ./images/portfolio9-12008@3x.webp 3x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp">
+    
+                                    <source srcset="./images/portfolio9-1200.jpg 1x,
+                                        ./images/portfolio9-1200@2x.jpg 2x,
+                                        ./images/portfolio9-1200@3x.jpg 3x"
+                                        media="(min-width: 1200px)">
+
+                        </picture>
 
                         <div class="overlay ">
                             <p class="overlay__text" >
@@ -280,8 +641,8 @@
             <address>
                 <ul class="info">
                     <li> <a class="info__address" href="#">г. Киев,пр-т Леси Украинки,26</a></li>
-                    <li> <a class="info__mail" href="info@example.com">info@example.com</a></li>
-                    <li> <a class="info__tel" href="+380991111111">+38 099 111 11 11</a></li>
+                    <li> <a class="info__mail-tel" href="info@example.com">info@example.com</a></li>
+                    <li> <a class="info__mail-tel" href="+380991111111">+38 099 111 11 11</a></li>
                 </ul>
             </address>
         </div>
@@ -329,7 +690,7 @@
         
        <!--Подписка на рассылку-->
     
-       <div>
+       <div class="form"> 
             <p class="invoke">Подпишитесь на рассылку</p>
                 
             <form class="form-footer"> 
