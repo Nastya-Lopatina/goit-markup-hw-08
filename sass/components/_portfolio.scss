@@ -78,14 +78,15 @@ box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .portfolio__list{
  width: 404px;
  margin-bottom: 30px;
+ margin-right: 30px;
  
     @media screen and (min-width: 768px) {
       flex-basis: calc((100% - 4 * 15px) / 2);
-      margin-right: 30px;
     }
-
+    
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 60px) / 3);
+      margin-right: 30px;
       
     }
 }
@@ -101,7 +102,7 @@ box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* Убираем правый отступ,каждому 2,3у элементу  */
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .portfolio-list__item:nth-child(2n) {
       margin-right: 0;
   }

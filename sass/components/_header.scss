@@ -3,13 +3,10 @@
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
-  min-width: 60px;
-  background-color: $main-title-color ;
-  z-index: 1;
-
-      @media screen and (min-width: 768px) {
-        min-width: 80px
+ 
+  min-height: 60px;
+     @media screen and (min-width: 768px) {
+        min-height: 80px
     }
 } 
 
