@@ -24,7 +24,7 @@
                                 aria-expanded="false"
                                 aria-controls="container-menu" data-menu-button >
                             
-                                <svg width="40px" height="40px" 
+                                <svg class="menu-button__svg" width="40px" height="40px" 
                                     aria-label="Переключатель мобильного меню" >
                                     
                                     <use class="icon-cross" href="./images/icon/mobile.svg#icon-cross"></use>
@@ -36,16 +36,20 @@
                         <div class="container-menu" id="container-menu" data-menu>
 
                             <ul class="site-nav " >
-                                <li> 
+                                <li class="site-nav__list"> 
                                     <a class="site-nav__link current" href="./index.html"> Студия</a>
                                 </li>
-                                <li> 
+
+                                <li class="site-nav__list"> 
                                     <a class="site-nav__link" href="./portfolio.html"> Портфолио</a>
                                 </li>
-                                <li> <a class="site-nav__link" href=""> Контакты</a></li>
+
+                                <li class="site-nav__list"> <a class="site-nav__link" href=""> Контакты</a></li>
                             </ul>
-                            <ul class="auth-nav-list">
-                                <li> 
+
+                            <ul class="auth-nav">
+
+                                <li class="auth-nav__list"> 
                                     
                                     <a class="auth-nav__contact " href="info@devstudio.com"> 
                                         
@@ -53,7 +57,8 @@
                                         <use href="./images/icon/sprinte.svg#icon-envelope"></use>
                                     </svg> info@devstudio.com</a>
                                 </li>
-                                <li> 
+
+                                <li class="auth-nav__list"> 
                                     
                                     <a class="auth-nav__contact " href=" +380961111111"> 
     

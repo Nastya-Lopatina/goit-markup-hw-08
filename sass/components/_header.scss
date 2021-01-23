@@ -1,27 +1,47 @@
 /* HEADER */
 .header{
-  position: relative;
-}
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-width: 60px;
+  background-color: $main-title-color ;
+  z-index: 1;
+
+      @media screen and (min-width: 768px) {
+        min-width: 80px
+    }
+} 
+
+
 .menu-nav{
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  min-height: 60px;
-  
-  
-  @media screen and (max-width: 767px)
-   {
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
+   }
+}
+.menu-nav >a{
+  @media screen and (min-width: 768px){
+    display: flex;
+    
   }
 }
+
  /*Кнопка открытия меню*/
-.menu-button{
+ .menu-button{
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+}
 
 }
  
@@ -37,20 +57,26 @@
 .menu-button.is-open .icon-cross{
   display: none;
 }  
- /*Контейнер*/
-.container-menu{
-  position: absolute;
-  display: none;
-  top: 100%;
+ 
+/*Контейнер для меню*/
 
-  width: 100%;
-  height:453px ;
-  left: 0;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
+.container-menu{
+display: flex;
+
+  @media screen and (max-width: 767px){
+    position: absolute;
+    padding: 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 1;
+    border: 1px solid #ECECEC;
+    background: $main-title-color;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
    0px 2px 4px rgba(0, 0, 0, 0.08), 
   0px 1px 3px rgba(0, 0, 0, 0.16);
-   
+  }
 }
 
 .container-menu.is-open{
@@ -59,112 +85,157 @@
   padding-bottom: 60px;
 }
 
-.site-nav,
-.auth-nav-list{
+
+/*site-nav list*/
+.site-nav {
 text-align: center;
+
+font-family: $primary-font;
+font-style: normal;
+font-weight:$subsidiary-weight;
+font-size: 18px;
+line-height: 1.17;
+letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px){
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px){
+    display: flex;
+    font-size: $basic-size;
+    line-height:$secondary-height;
+  }
+  @media screen and (min-width: 1200px){
+    margin-right: 305px;
+  }
 }
 
-.site-nav__link{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.02em;
-  color: #212121;
-  }
-
-  /*site-nav list
-  .site-nav{
-    display: flex;
-    
-  }
-  .site-nav li + li{
-  margin-left: 50px ;
-  }
-  
-  .site-nav__link{
-    position: relative;
-
-    padding-top: 8px; 
-    padding-bottom: 32px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    color: $main-title-color;
-    font-weight: $subsidiary-weight;
-    font-size:  $basic-size;
-    line-height: $secondary-height;
-    letter-spacing: 0.02em;
-
-     &.current::after{
-       position: absolute;
-       left: 0;
-       bottom: 0;
-     
-       content: "";
-       display: block;
-       opacity: 0;
-     
-       transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-     
-       width: 100%;
-       height: 4px;
-       
-       background-color: $accent-color;
-       border-radius: 2px;
-     }
-
-     &:hover::after,
-     &:active::after,
-     &.current::after{
-       opacity: 1;
-     }
-  }
-  
-  
-  .site-nav__link:hover,
-  .site-nav__link:active,
-  .site-nav__link.current{
-    color: $accent-color;
-  }*/
-  
-  /*auth-nav list
-  .auth-nav{
-    display: flex;
-    margin-left: auto;
-    
-  }
-  .auth-nav li + li{
-    margin-left: 50px;
-  }
-  .auth-nav__contact {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  
-    padding-top: 8px;
-    padding-bottom: 32px;
-  
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-    color: $text-color;
-    font-weight:$subsidiary-weight;
-    font-size:  $basic-size;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    &:hover,
-    &:focus{
-    color: $accent-color;
+.site-nav__list{
+    @media screen and (max-width: 767px){
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      }
     }
-  } 
 
-  .envelope{
-    margin-right: 10px;
-    fill: currentColor;
+    @media screen and (min-width: 768px){
+      margin-right: 50px;
+  }
+}
+.site-nav__link{
+  position: relative;
+  display: inline-block;
+  color:$main-text-color;
+  padding-bottom: 8px;
+ 
+  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      @media screen and (min-width: 768px){
+        padding: 32px 0;
+      }
+
+      @media screen and (min-width: 768px) {
+      padding-bottom: 33px;
+      }
+
+
+   &.current::after{
+     position: absolute;
+     
+     left: 0;
+     bottom: 0;
+   
+     content: "";
+     display: block;
+     opacity: 0;
+   
+     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+     width: 100%;
+     height: 4px;
+     
+     background-color: $accent-color;
+     border-radius: 2px;
+   }
+
+   &:hover::after,
+   &:active::after,
+   &.current::after{
+     opacity: 1;
+   }
+   
+   
+  
+}
+
+
+.site-nav__link:hover,
+.site-nav__link:active,
+.site-nav__link.current{
+  color: $accent-color;
+}
+
+/*auth-nav list*/
+.auth-nav{
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 1199px) {
+    padding-top: 21px;
   }
 
-  .smartphone{
-    margin-right: 10px;
-    fill: currentColor;
-  }*/
+  @media screen and (min-width: 1200px) {
+    display: flex;
+   }
+}
+
+.auth-nav__list:not(:last-child){
+  @media screen and (max-width: 767px) {
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    margin-right: 30px;
+}
+}
+.auth-nav__contact {
+  display: inline-flex;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  color: $text-color;
+  font-weight: $subsidiary-weight;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+    @media screen and (min-width: 768px) {
+        font-size: 12px;
+        line-height: 1.16;
+    }
+
+   @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+   }
+
+  &:hover,
+  &:focus{
+  color: $accent-color;
+  }
+} 
+
+.envelope{
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.smartphone{
+  margin-right: 10px;
+  fill: currentColor;
+}
