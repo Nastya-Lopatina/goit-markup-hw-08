@@ -4,24 +4,45 @@
 }
 
 .footer .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-
     padding-top: 60px;
     padding-bottom: 60px;
-  } 
-  
-  .content-link{
-    margin-right: 70px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: nowrap;
+      }
   }
+
+  .content-link{
+    @media screen and (min-width: 768px) {
+      margin-right: 165px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+      text-align: center;
+  }
+    @media screen and (min-width: 1200px) {
+       margin-right: 70px;
+       }
+  }
+  
   .content-link > a{
-    display: flex;
+  
     margin-bottom: 20px;
   }
 
 
   /*Адрес+контакты*/
+
+  
   .info li + li{
     margin-top: 9px;
   }
@@ -33,36 +54,20 @@
   font-size:  $basic-size;
   line-height: $third-height;
 }
-.info__mail{
-  color: $contact-color;
-  font-style: normal;
-  font-size:  $basic-size;
-  line-height: $third-height;
-}
-.info__tel{
+.info__mail-tel{
   color: $contact-color;
   font-style: normal;
   font-size:  $basic-size;
   line-height: $third-height;
 }
 
+
 /*Присоединяйтесь*/
-.invoke-social{
-    margin-right: 93px;
-  }
-  .invoke{
-    margin-top: 0;
-    margin-bottom: 20px;
-  
-    color: $main-title-color;
-    font-weight:$basic-weight;
-    font-size:  $basic-size;
-    line-height:$secondary-height;
-    text-transform: uppercase;
-    }
+
   
   .social-footer{
     display: flex;
+    justify-content: center;
   }
   
   .social-footer li + li{
@@ -72,7 +77,7 @@
     width: 44px;
     height: 44px;
   
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
   
@@ -92,24 +97,69 @@
   
   
   /*Подписка на рассылк*/
-  .form-footer{
-    display: flex;
+
+  .invoke-social{
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+      text-align: center;
   }
-  .form-footer__input{
+
+    @media screen and (min-width:1200px) {
+      margin-right: 93px;
+      margin-bottom: 0;
+  }
+}
+
+.invoke{
+      margin-top: 0;
+      margin-bottom: 20px;
+     
+      color: $main-title-color;
+      font-weight:$basic-weight;
+      font-size:  $basic-size;
+      line-height:$secondary-height;
+      text-transform: uppercase;
+}
+
+.form{
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+}
+}
+ 
+.form-footer{
+  @media screen and (min-width: 1200px){
+    display: flex;
+    align-items: center;
+}
+}
+.form-footer__input{
+
     color:$main-title-color;
-    padding-left: 16px; 
-    width: 358px;
+    padding-left: 15px; 
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background:$footer-hero-color;
+
+   @media screen and (max-width: 479px) {
+      width: 100%
+    }
+    
+    @media screen and (max-width: 1199px){
+      margin-bottom: 20px;
   }
-  .subscribe{
-   margin-left: 12px;
-   
-  } 
+    @media screen and (min-width:1200px) {
+      width: 358px;
+      margin-right:12px;
+
+  }
+
+  }
+  
   
   .icon-send{
     margin-left: 10px;

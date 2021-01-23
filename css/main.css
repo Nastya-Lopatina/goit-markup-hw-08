@@ -536,12 +536,12 @@ img {
 }
 
 .section-hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: #2F303A;
   text-align: center;
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner-480.jpg");
@@ -585,6 +585,9 @@ img {
 
 @media screen and (min-width: 1200px) {
   .section-hero {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner-1200.jpg");
     background-position: center;
     background-size: cover;
@@ -609,9 +612,17 @@ img {
   font-weight: 900;
   font-size: 26px;
   line-height: 1.61;
+  text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-top: 0;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero__maim-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .section-title {
@@ -932,19 +943,46 @@ img {
 }
 
 .footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.content-link {
-  margin-right: 70px;
+@media screen and (min-width: 768px) {
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content-link {
+    margin-right: 165px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .content-link {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content-link {
+    margin-right: 70px;
+  }
 }
 
 .content-link > a {
-  display: flex;
   margin-bottom: 20px;
 }
 
@@ -961,14 +999,7 @@ img {
   line-height: 1.71;
 }
 
-.info__mail {
-  color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.info__tel {
+.info__mail-tel {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
@@ -976,22 +1007,9 @@ img {
 }
 
 /*Присоединяйтесь*/
-.invoke-social {
-  margin-right: 93px;
-}
-
-.invoke {
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
 .social-footer {
   display: flex;
+  justify-content: center;
 }
 
 .social-footer li + li {
@@ -1001,7 +1019,7 @@ img {
 .social-footer__link {
   width: 44px;
   height: 44px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1018,14 +1036,47 @@ img {
 }
 
 /*Подписка на рассылк*/
-.form-footer {
-  display: flex;
+@media screen and (max-width: 1199px) {
+  .invoke-social {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .invoke-social {
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
+}
+
+.invoke {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1199px) {
+  .form {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-footer {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .form-footer__input {
   color: #FFFFFF;
-  padding-left: 16px;
-  width: 358px;
+  padding-left: 15px;
+  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -1034,8 +1085,23 @@ img {
   background: #2F303A;
 }
 
-.subscribe {
-  margin-left: 12px;
+@media screen and (max-width: 479px) {
+  .form-footer__input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .form-footer__input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-footer__input {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .icon-send {
