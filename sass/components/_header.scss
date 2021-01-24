@@ -46,18 +46,21 @@
 
 }
  
-.menu-button .icon-open{
+.icon-open{
   display: none;
   fill: currentColor;
 }
 
+.icon-cross{
+  fill: currentColor;
+}
 .menu-button.is-open .icon-open{
   display: block;
 }
-  
+
 .menu-button.is-open .icon-cross{
   display: none;
-  fill: currentColor;
+  
 }  
  
 /*Контейнер для меню*/

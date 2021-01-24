@@ -377,8 +377,12 @@ img {
   }
 }
 
-.menu-button .icon-open {
+.icon-open {
   display: none;
+  fill: currentColor;
+}
+
+.icon-cross {
   fill: currentColor;
 }
 
@@ -388,7 +392,6 @@ img {
 
 .menu-button.is-open .icon-cross {
   display: none;
-  fill: currentColor;
 }
 
 /*Контейнер для меню*/
