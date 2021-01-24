@@ -5,25 +5,39 @@
     left: 0;
     width: 100%;
     height: 100%;
-    
+    padding: 94px 15px;
     background-color:  rgba(0, 0, 0, 0.2);
-    
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: scroll;
+
+    @media screen and (min-width: 768px)  {
+    padding: 208px 159px;
   }
+  
+ 
+  }
+
   .modal-window{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
     padding: 40px;
-    
-    width: 528px;
-    height: 581px;
+    width: 100%;
+    height: 609px;
     
     background: $main-title-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+     
+    @media screen and (min-width: 1200px){
+      position: absolute;
+      width:528px;
+      height: 581px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+     
+    }
     
   }
   .modal-bgr.is-hidden{
@@ -71,7 +85,7 @@
   .form-field__label,
   .comment__label{
     display: block;
-
+    text-align: left;
     margin-top: 0;
     margin-bottom: 4px;
     color: $text-color;
@@ -162,10 +176,15 @@
     align-items: center;
     
     font-weight:$second-weight;
-    font-size:  $basic-size;
-    line-height: $third-height;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--text-color);
+
+    @media screen and (min-width: 1200px){
+      font-size:$basic-size;
+      line-height: $third-height;
+    }
 
     &::before{
       content: "";
