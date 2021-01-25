@@ -1487,7 +1487,7 @@ img {
 }
 
 .portfolio__list {
-  width: 404px;
+  min-width: 404px;
   margin-bottom: 30px;
   margin-right: 30px;
 }
