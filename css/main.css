@@ -270,6 +270,7 @@ summary {
 /* Общие свойства всего документа */
 body {
   padding-top: 60px;
+  overflow-x: hidden;
   background-color: #FFFFFF;
   color: #212121;
   font-family: Roboto, OpenSans;
@@ -280,6 +281,10 @@ body {
   body {
     padding-top: 80px;
   }
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 a {
