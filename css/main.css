@@ -333,6 +333,7 @@ img {
   background-color: #FFFFFF;
   min-height: 60px;
   z-index: 1;
+  border: 1px solid #ECECEC;
 }
 
 @media screen and (min-width: 768px) {
@@ -408,7 +409,6 @@ img {
     width: 100%;
     display: none;
     z-index: 1;
-    border: 1px solid #ECECEC;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
@@ -744,7 +744,7 @@ img {
 }
 
 .advantage li {
-  width: 450px;
+  min-width: width 450px;
 }
 
 @media screen and (max-width: 767px) {
